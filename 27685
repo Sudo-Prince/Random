@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy National Girlfriend's Day 💙</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:auto;
+    background:linear-gradient(135deg,#e6f7ff,#d6f0ff,#ccecff,#f0fbff);
+    padding:20px;
+}
+
+/* Floating Hearts */
+.heart{
+    position:absolute;
+    color:#66b3ff;
+    animation:float linear infinite;
+    z-index:1;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(100vh) scale(.5);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-120vh) scale(1.6);
+        opacity:0;
+    }
+}
+
+/* Main Card */
+.card{
+    width:95%;
+    max-width:1100px;
+    background:rgba(255,255,255,0.75);
+    backdrop-filter:blur(12px);
+    border-radius:30px;
+    padding:50px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,100,200,0.2);
+    position:relative;
+    z-index:2;
+@media (min-width: 1024px){
+
+    .card{
+        max-width:1200px;
+        padding:60px;
+    }
+
+    h1{
+        font-size:3.2rem;
+    }
+
+    .message{
+        font-size:1.4rem;
+        line-height:2;
+    }
+
+    .cinnamoroll{
+        width:320px;
+    }
+
+    button{
+        font-size:22px;
+        padding:15px 40px;
+    }
+}
+}
+
+.cinnamoroll{
+    width:220px;
+    margin-bottom:15px;
+    animation:wave 2.5s ease-in-out infinite;
+}
+
+@keyframes wave{
+    0%,100%{transform:rotate(0deg);}
+    25%{transform:rotate(-3deg);}
+    75%{transform:rotate(3deg);}
+}
+
+h1{
+    color:#0b4f8c;
+    margin-bottom:20px;
+    font-size:2.2rem;
+}
+
+.message{
+    color:#1b6ca8;
+    font-size:1.1rem;
+    line-height:1.9;
+}
+
+.highlight{
+    color:#00509d;
+    font-weight:bold;
+}
+
+.tulips{
+    font-size:40px;
+    margin:10px 0;
+}
+
+.footer{
+    margin-top:20px;
+    color:#3b82c4;
+    font-style:italic;
+}
+
+button{
+    margin-top:25px;
+    padding:12px 30px;
+    border:none;
+    border-radius:30px;
+    background:linear-gradient(45deg,#66b3ff,#1e90ff);
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <div class="tulips">🩵🌷 🩵🌷 🩵🌷</div>
+<img class="cinnamoroll"
+src="https://static.wikia.nocookie.net/hellokitty/images/a/a5/Mv-cinnamon.png/revision/latest/thumbnail/width/360/height/360?cb=20250930161135"
+alt="Cinnamoroll">
+
+    <div class="tulips">🩵🌷 🩵🌷 🩵🌷</div>
+
+    <h1>💙 Happy National Girlfriend's Day 💙</h1>
+
+    <p class="message">
+        <span class="highlight">Happy National Girlfriend's Day, Riven!</span>
+        <br><br>
+
+        Today is the day where I can celebrate having the most wonderful woman who stays by my side through hardships, through challenges, through things beyond what we can imagine, but still chooses to be with me.
+        <br><br>
+
+        I love you so much for everything that you've done for me. I know there will be times we misunderstand each other, but I promise you that I will never, ever find a way to leave you. Instead, I will always find a way to stay with you until the end of our lives.
+        <br><br>
+
+        <span class="highlight">
+            Again, I loveeee youuuuu forever and ever. 🧡🧡🧡🧡
+        </span>
+    </p>
+<button onclick="showMessage()">Click Me 💙</button>
+<div id="loveMessage" style="display:none; margin-top:25px;">
+    <div style="
+        background:white;
+        padding:25px;
+        border-radius:20px;
+        border:3px solid #66b3ff;
+    ">
+        <h2 style="color:#0b4f8c;">💙 A Message For You 💙</h2>
+
+        <p class="message">
+            Hellooo babyyyy,<br><br>
+
+            I can't wait to see you and have a great bond with you, because it is National Girlfriend's Day.<br><br>
+
+            I am going to please you 😉<br><br>
+
+            Ima be direct to the point, go get ready for me baby 😉
+        </p>
+    </div>
+</div>
+    <div class="footer">
+        Forever yours 💙
+    </div>
+
+</div>
+<script>
+function showMessage(){
+    document.getElementById("loveMessage").style.display = "block";
+}
+</script>
+</script>
+
+
+</script>
+
+</body>
+<script>
+function showLove(){
+    alert("Hellooo babyyyy,\n\nI can't wait to see you and have a great bond with you, because it is National Girlfriend's day.\n\nI am going to please you ;)\n\nIma be direct to the point, go get ready for me baby ;)");
+
+}
+
+function createHeart(){
+    const heart = document.createElement("div");
+    heart.className = "heart";
+
+    const hearts = ["💙","🩵","💙","🩵"];
+    heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (15 + Math.random() * 35) + "px";
+    heart.style.animationDuration = (4 + Math.random() * 5) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 9000);
+}
+
+setInterval(createHeart, 250);
+</script>
+</html>
